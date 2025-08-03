@@ -465,7 +465,7 @@ header ul a:hover {
     margin-top: 0;
 }
 
-.project-info button {
+/* .project-info button {
     color: white;
     padding: 15px 35px;
     border-radius: 10px;
@@ -476,10 +476,55 @@ header ul a:hover {
     transition: 0.3s;
 }
 
+.project-info .btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
 .project-info button:hover {
     opacity: 0.8;
     box-shadow: 0 0 15px #72a1de81;
+} */
+/* your existing styles kept */
+.project-info .btn-row button{
+  color:#fff;                    /* base color */
+  padding:15px 35px;
+  border-radius:10px;
+  border:1px solid #72a1de81;
+  background-color:#2200493d;
+  box-shadow:0 0 5px #72a1de81;
+  cursor:pointer;
+  transition:.3s;
 }
+
+/* make the anchor inside the button inherit the white color */
+.project-info .btn-row button a{
+  color: inherit !important;     /* force white */
+  text-decoration: none;         /* no underline */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;                      /* space between icon and text */
+}
+
+/* keep visited links white too */
+.project-info .btn-row button a:visited{
+  color: inherit !important;
+}
+
+.project-info .btn-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.project-info .btn-row button:hover{
+  opacity:.8;
+  box-shadow:0 0 15px #72a1de81;
+}
+
 
 .project-vidbox .hover-sign {
     position: absolute;
