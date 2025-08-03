@@ -652,6 +652,28 @@ header ul a:hover{
     color: white;
     margin-top: 40px;
 }
+/* Address only */
+.address-row{
+  display: flex;
+  align-items: flex-start;     
+  gap: 10px;
+  color: lightgray;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.address-row i{
+  font-size: 28px;
+  color: #7668ff;             
+  line-height: 1;
+  margin-top: 2px;             
+}
+
+.addr-lines span{
+  display: block;              
+  line-height: 1.3;
+}
+
 
 .contact-box p{
     max-width: 400px;
