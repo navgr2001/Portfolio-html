@@ -9,6 +9,16 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" type="image/png" href="images/naveen grero.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "wka595kYAVP5mZe1h",
+            });
+        })();
+    </script>
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -297,7 +307,7 @@
             <h1 class="section-title matrix-heading" data-text="LET'S TALK">Contact Me </h1>
 
             <div class="social-box autoBlur">
-                <a href="#"><i class='bx bxs-phone'></i> +94 76 452 5012</a>
+                <a href="#"><i class='bx bxs-phone'></i> (+94) 76 452 5012</a>
                 <a href="#" class="address-row"><i class='bx bxs-home'></i> <span class="addr-lines">
                         <span>No 42, Wattawa Road,</span>
                         <span>Amandoluwa,</span>
@@ -317,15 +327,19 @@
                     project to file. I'm here to help.</p>
 
                 <p>Full Name</p>
-                <input placeholder="Your Full name" type="full name">
+                <input placeholder="Your Full name" id="name" type="full name" required>
 
                 <p>Email Address</p>
-                <input placeholder="Your Email" type="Contact">
+                <input placeholder="Your Email" id="email" type="Contact" required>
+
+                <p>Subject</p>
+                <input class="subject-message" id="subject" type="contact" placeholder="Enter the subject" required>
+
 
                 <p>Your Message</p>
-                <input class="input-message" type="contact" placeholder="shaire your thoughts...">
+                <input class="input-message" id="message" type="contact" placeholder="Share your thoughts..." required>
 
-                <button>Send Message <i class='bx bx-mail-send'></i></button>
+                <button type="submit" onclick="sendMail()">Send Message <i class='bx bx-mail-send'></i></button>
             </div>
 
         </section>

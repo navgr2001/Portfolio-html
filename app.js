@@ -37,3 +37,12 @@ closeIcon.addEventListener("click", function(){
 
 
 
+function sendMail(){
+    let parms={
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        subject : document.getElementById("subject").value,
+        message : document.getElementById("message").value,
+    }
+    emailjs.send("service_fdwz8ig","template_81db644",parms).then(alert("Email sent...!"))
+}
