@@ -271,12 +271,10 @@ header ul a:hover {
 .scroll-down::before {
     top: 30%;
     animation-delay: 0.5s;
-    /* animation: scroll-down 1s ease-in-out infinite; */
 }
 
 @keyframes scroll-down {
     0% {
-        /* top:20%; */
         opacity: 0;
     }
 
@@ -304,14 +302,10 @@ header ul a:hover {
 
 .about-me-section .matrix-heading {
     display: block;
-    /* take the full line */
     width: 100%;
     text-align: center;
-    /* center text */
     margin: 0 auto 40px;
-    /* space below */
     z-index: 2;
-    /* stay above the matrix overlay */
 }
 
 .about-me-section {
@@ -469,32 +463,9 @@ header ul a:hover {
     margin-top: 0;
 }
 
-/* .project-info button {
-    color: white;
-    padding: 15px 35px;
-    border-radius: 10px;
-    border: 1px solid #72a1de81;
-    background-color: #2200493d;
-    box-shadow: 0 0 5px #72a1de81;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.project-info .btn-row {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.project-info button:hover {
-    opacity: 0.8;
-    box-shadow: 0 0 15px #72a1de81;
-} */
-/* your existing styles kept */
 .project-info .btn-row button {
     color: #fff;
-    /* base color */
     padding: 15px 35px;
     border-radius: 10px;
     border: 1px solid #72a1de81;
@@ -504,16 +475,12 @@ header ul a:hover {
     transition: .3s;
 }
 
-/* make the anchor inside the button inherit the white color */
 .project-info .btn-row button a {
     color: inherit !important;
-    /* force white */
     text-decoration: none;
-    /* no underline */
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    /* space between icon and text */
 }
 
 /* keep visited links white too */
@@ -562,7 +529,6 @@ header ul a:hover {
 
 @keyframes hover-animation {
     0% {
-        /* top:20%; */
         box-shadow: 0 0 5px rgb(255, 255, 255);
         transform: translate(100%, 50%) rotate(30deg);
     }
@@ -726,13 +692,9 @@ header ul a:hover {
 
 .contact-section .matrix-heading {
     display: block;
-    /* take the full line */
-    /* width: 100%; */
     text-align: center;
     margin: 0 auto 40px;
-    /* space below */
     z-index: 2;
-    /* stay above the matrix overlay */
 }
 
 .social-box {
@@ -951,18 +913,6 @@ header ul a:hover {
     text-shadow: 0 0 15px #4c4c4c;
 }
 
-/* .social-sidebar {
-    padding-left: 20px;
-    margin-top: 60px;
-    text-wrap: nowrap;
-}
-
-.social-sidebar a {
-    font-size: 35px;
-    padding: 5px 5px;
-    cursor: pointer;
-    transition: 0.5s;
-} */
 /* sidebar container (vertical stack) */
 .social-sidebar {
     padding-left: 20px;
@@ -981,7 +931,6 @@ header ul a:hover {
     align-items: center;
     justify-content: center;
     width: 36px;
-    /* tweak size for sidebar */
     height: 36px;
     border: 2px solid #72a1de;
     border-radius: 50%;
@@ -1176,23 +1125,19 @@ header ul a:hover {
     .about-me-section {
         width: 100%;
         margin: 60px auto;
-        /* tighter spacing */
     }
 
     .about-me-container {
         gap: 20px;
-        /* smaller gap between image and text */
     }
 
     .about-me-image img {
         width: 350px;
-        /* shrink image */
         border-radius: 12px;
     }
 
     .about-me-content {
         max-width: 320px;
-        /* narrower text column */
     }
 
 
@@ -1238,8 +1183,30 @@ header ul a:hover {
         min-width: 0;
     }
 
-    .project-info button {
-        padding: 5px 10px;
+    .project-info .btn-row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .project-info .btn-row button {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .project-info .btn-row button a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .project-info .btn-row button i {
+        font-size: 16px;
     }
 
     .my-project {
@@ -1390,7 +1357,6 @@ header ul a:hover {
 
     .about-me-image img {
         width: 280px;
-        /* smaller image on very small screens */
     }
 
     .about-me-content {
