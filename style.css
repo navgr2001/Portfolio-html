@@ -1174,7 +1174,7 @@ header ul a:hover {
     }
 
     .about-me-section {
-        width: 94%;
+        width: 100%;
         margin: 60px auto;
         /* tighter spacing */
     }
@@ -1185,7 +1185,7 @@ header ul a:hover {
     }
 
     .about-me-image img {
-        width: 260px;
+        width: 350px;
         /* shrink image */
         border-radius: 12px;
     }
@@ -1389,7 +1389,7 @@ header ul a:hover {
     }
 
     .about-me-image img {
-        width: 200px;
+        width: 280px;
         /* smaller image on very small screens */
     }
 
