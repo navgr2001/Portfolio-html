@@ -18,6 +18,7 @@ html {
     align-items: center;
     gap: 100px;
     background-color: #001f7c38;
+    padding-top: 80px;
 }
 
 
@@ -31,19 +32,22 @@ html {
 
 
 header {
-    display: flex;
-    position: absolute;
+    position: fixed;
+    /* was: absolute */
     top: 0;
-    right: 0;
     left: 0;
+    right: 0;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
     height: 70px;
+    padding: 0 30px;
     background-color: rgba(255, 255, 255, 0.121);
     backdrop-filter: blur(5px);
     box-shadow: 0 0 15px #72a1dea2;
-    z-index: 999;
+    z-index: 9999;
+    /* keep it above everything */
+    width: 100%;
 }
 
 .left {
@@ -488,41 +492,45 @@ header ul a:hover {
     box-shadow: 0 0 15px #72a1de81;
 } */
 /* your existing styles kept */
-.project-info .btn-row button{
-  color:#fff;                    /* base color */
-  padding:15px 35px;
-  border-radius:10px;
-  border:1px solid #72a1de81;
-  background-color:#2200493d;
-  box-shadow:0 0 5px #72a1de81;
-  cursor:pointer;
-  transition:.3s;
+.project-info .btn-row button {
+    color: #fff;
+    /* base color */
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: 1px solid #72a1de81;
+    background-color: #2200493d;
+    box-shadow: 0 0 5px #72a1de81;
+    cursor: pointer;
+    transition: .3s;
 }
 
 /* make the anchor inside the button inherit the white color */
-.project-info .btn-row button a{
-  color: inherit !important;     /* force white */
-  text-decoration: none;         /* no underline */
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;                      /* space between icon and text */
+.project-info .btn-row button a {
+    color: inherit !important;
+    /* force white */
+    text-decoration: none;
+    /* no underline */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* space between icon and text */
 }
 
 /* keep visited links white too */
-.project-info .btn-row button a:visited{
-  color: inherit !important;
+.project-info .btn-row button a:visited {
+    color: inherit !important;
 }
 
-.project-info .btn-row{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:10px;
+.project-info .btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.project-info .btn-row button:hover{
-  opacity:.8;
-  box-shadow:0 0 15px #72a1de81;
+.project-info .btn-row button:hover {
+    opacity: .8;
+    box-shadow: 0 0 15px #72a1de81;
 }
 
 
@@ -1165,6 +1173,28 @@ header ul a:hover {
         top: 5%;
     }
 
+    .about-me-section {
+        width: 94%;
+        margin: 60px auto;
+        /* tighter spacing */
+    }
+
+    .about-me-container {
+        gap: 20px;
+        /* smaller gap between image and text */
+    }
+
+    .about-me-image img {
+        width: 260px;
+        /* shrink image */
+        border-radius: 12px;
+    }
+
+    .about-me-content {
+        max-width: 320px;
+        /* narrower text column */
+    }
+
 
 
     .info-cards {
@@ -1346,6 +1376,25 @@ header ul a:hover {
     .card h1 {
         bottom: 30%;
         font-size: 5px;
+    }
+
+
+    .about-me-section {
+        width: 95%;
+        margin: 40px auto;
+    }
+
+    .about-me-container {
+        gap: 16px;
+    }
+
+    .about-me-image img {
+        width: 200px;
+        /* smaller image on very small screens */
+    }
+
+    .about-me-content {
+        max-width: 280px;
     }
 
     .project-card {
