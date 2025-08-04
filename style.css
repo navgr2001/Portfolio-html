@@ -88,10 +88,29 @@ header ul a:hover {
     text-shadow: 0 0 15px black;
 }
 
+
+.menu-icon {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 10001;
+    /* above header contents */
+}
+
+.menu-icon i {
+    pointer-events: none;
+}
+
 .box-icons {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+    padding-right: 50px;
 }
 
 .box-icons a {
@@ -334,7 +353,7 @@ header ul a:hover {
 }
 
 .job-title {
-    font-size: 22px;
+    font-size: 30px;
     color: #72a1de;
     margin-bottom: 20px;
 }
@@ -360,7 +379,7 @@ header ul a:hover {
 .timeline-dot {
     width: 12px;
     height: 12px;
-    background: #72a1de;
+    background: #378effa8;
     border-radius: 50%;
     margin-top: 6px;
     flex-shrink: 0;
@@ -878,10 +897,10 @@ header ul a:hover {
     position: fixed;
     right: 0;
     top: 0;
-    bottom: 70%;
+    bottom: 0; 
     width: 0%;
     background-color: #000000b8;
-    z-index: 999;
+    z-index: 10001; 
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.479);
     backdrop-filter: blur(10px);
     opacity: 0;
@@ -1079,16 +1098,18 @@ header ul a:hover {
         height: 50px;
     }
 
-    header ul {
-        display: none;
-    }
-
+    header ul,
     header .box-icons {
         display: none;
     }
 
     .menu-icon {
-        display: inline;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        /* push to far right */
+        padding-right: 75px;
     }
 
     .blackhole-box video {
