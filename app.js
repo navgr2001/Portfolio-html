@@ -46,3 +46,4 @@ function sendMail(){
     }
     emailjs.send("service_fdwz8ig","template_81db644",parms).then(alert("Email sent...!"))
 }
+
