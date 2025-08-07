@@ -586,13 +586,23 @@ header ul a:hover {
     mix-blend-mode: difference;
 }
 
+.skills-video {
+    width: 80%;
+    height: auto;
+    max-width: 900px;
+    mix-blend-mode: difference;
+    object-fit: contain;
+    border-radius: 20px;
+    z-index: 1;
+}
+
 .Designer {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
     top: 25%;
-    left: 5%;
+    left: 2%;
     max-width: 300px;
 }
 
@@ -612,8 +622,8 @@ header ul a:hover {
     display: flex;
     flex-direction: column;
     align-items: start;
-    top: 25%;
-    right: 5%;
+    top: 50%;
+    right: 0%;
     max-width: 300px;
 }
 
@@ -637,12 +647,15 @@ header ul a:hover {
 /* SLIDER  */
 
 .slider {
-    position: absolute;
+position: absolute;
+top: 100%;
     bottom: 5%;
-    right: 20%;
-    width: 60%;
-    top: 100%;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Perfect centering */
+    
+    width: auto; /* Let content define width or use a fixed width */
     height: var(--height);
+
     overflow: hidden;
     mask-image: linear-gradient(to right,
             transparent,
