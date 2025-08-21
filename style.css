@@ -1193,6 +1193,88 @@ header ul a:hover {
     }
 }
 
+/* ====== NEW: TABLET BREAKPOINT (e.g., iPad Mini 768×1024) ====== */
+@media screen and (max-width: 1024px) {
+
+    /* switch to mobile-style header */
+    header {
+        height: 60px;
+    }
+
+    header ul,
+    header .box-icons {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding-right: 60px;
+        /* tighter than phone */
+        font-size: 30px;
+    }
+
+    /* sidebar width better for tablet */
+    .sidebar.open-sidebar {
+        animation: openSideBarTablet 1.2s forwards;
+    }
+
+    @keyframes openSideBarTablet {
+        to {
+            width: 60%;
+            opacity: 1;
+            bottom: 0;
+            border-radius: 0;
+        }
+    }
+
+    .sidebar.close-sidebar {
+        animation: closeSideBarTablet 1.2s forwards;
+    }
+
+    @keyframes closeSideBarTablet {
+        from {
+            width: 60%;
+            opacity: 1;
+            bottom: 0;
+            border-radius: 0;
+        }
+
+        to {
+            width: 0;
+            opacity: 0;
+            bottom: 70%;
+            border-bottom-left-radius: 50%;
+        }
+    }
+
+    /* hero/video balance on tablet */
+    .blackhole-box video {
+        margin-top: -18%;
+    }
+
+    .skills-video-box {
+        right: 0;
+    }
+
+    .skills-video {
+        max-width: 720px;
+    }
+
+    /* ensure hero text doesn’t overflow */
+    .hero-info h1 {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    .hero-info p {
+        font-size: 18px;
+        max-width: 480px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     header {
         position: fixed;
@@ -1436,20 +1518,20 @@ header ul a:hover {
     }
 
     .sidebar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 0%;
-    background-color: #000000b8;
-    z-index: 10001;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.479);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    border-bottom-left-radius: 100%;
-    transform: translateX(-60px);
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 0%;
+        background-color: #000000b8;
+        z-index: 10001;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.479);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        border-bottom-left-radius: 100%;
+        transform: translateX(-60px);
 
-}
+    }
 
     .hero .skills-video-box {
         display: none;
