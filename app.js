@@ -120,3 +120,27 @@ function sendMail() {
     emailjs.send("service_fdwz8ig", "template_81db644", parms).then(alert("Email sent...!"))
 }
 
+(function () {
+    const list = document.querySelector('#projects .projects-list');
+    const btn  = document.getElementById('toggleProjects');
+
+    if (!list || !btn) return;
+
+    btn.addEventListener('click', () => {
+      const expanded = list.classList.toggle('expanded');
+      list.classList.toggle('collapsed', !expanded);
+
+      btn.innerHTML = expanded
+        ? "<i class='bx bx-chevron-up'></i> See less"
+        : "<i class='bx bx-chevron-down'></i> See more";
+
+      // If collapsing, keep the section in view
+      if (!expanded) {
+        document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    // init as collapsed
+    list.classList.add('collapsed');
+  })();
+
